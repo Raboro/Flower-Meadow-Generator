@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./flower-meadow-generator-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "db"
+
+  db:
+    image: "postgres:13.1-alpine"
+    restart: always
+    container_name: flower-meadow-generator-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: f-m-generator-user
+      POSTGRES_PASSWORD: test1234
