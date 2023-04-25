@@ -16,3 +16,11 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Backend&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Backend)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Backend&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Backend)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Backend&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Backend)
+
+---
+## Run the application
+
+Just run the following command to start the two docker container: One for the Java Spring Boot backend and the other for the Postgresql database:
+````bash
+docker compose up
+````
