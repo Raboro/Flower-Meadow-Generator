@@ -74,7 +74,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>io.github.raboro.FlowerMeadowGeneratorBackendApplication</mainClass>
+					<mainClass>io.github.raboro.flowermeadowgenerator.FlowerMeadowGeneratorBackendApplication</mainClass>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
