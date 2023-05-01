@@ -22,5 +22,5 @@
 
 Just run the following command to start the two docker container: One for the Java Spring Boot backend and the other for the Postgresql database:
 ````bash
-docker compose up
+$ docker compose up
 ````
