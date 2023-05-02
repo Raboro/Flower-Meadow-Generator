@@ -48,4 +48,15 @@ public class FlowerBusinessLogic {
         flower.setId(byId.getId());
         return mapper.toDTO(repository.save(flower));
     }
+
+    public FlowerDTO getFlowerByID(long id) {
+        Optional<Flower> byId = repository.findById(id);
+        return byId.map(mapper::toDTO).orElse(null);
+    }
+
+    public List<FlowerDTO> getFlowersByCategory(String category) {
+        return repository.findAllByCategory(category).stream()
+                .map(mapper::toDTO)
+                .toList();
+    }
 }
