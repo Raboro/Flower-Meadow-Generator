@@ -4,6 +4,9 @@ import io.github.raboro.flowermeadowgenerator.database.model.Flower;
 import io.github.raboro.flowermeadowgenerator.rest.dto.FlowerDTO;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Raboro
+ */
 @Component
 public class FlowerMapper {
 

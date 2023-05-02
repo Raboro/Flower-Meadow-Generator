@@ -1,5 +1,8 @@
 package io.github.raboro.flowermeadowgenerator.rest.dto;
 
+/**
+ * @author Raboro
+ */
 public class FlowerDTO {
 
     long id;
