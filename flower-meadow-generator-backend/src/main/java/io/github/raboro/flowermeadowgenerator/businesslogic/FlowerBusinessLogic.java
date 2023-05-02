@@ -1,5 +1,6 @@
 package io.github.raboro.flowermeadowgenerator.businesslogic;
 
+import io.github.raboro.flowermeadowgenerator.database.model.Flower;
 import io.github.raboro.flowermeadowgenerator.database.repository.FlowerRepository;
 import io.github.raboro.flowermeadowgenerator.rest.dto.FlowerDTO;
 import io.github.raboro.flowermeadowgenerator.rest.mapper.FlowerMapper;
@@ -19,5 +20,10 @@ public class FlowerBusinessLogic {
         return repository.findAll().stream()
                 .map(mapper::toDTO)
                 .toList();
+    }
+
+    public FlowerDTO addFlower(FlowerDTO flowerDTO) {
+        Flower flower = mapper.toModel(flowerDTO);
+        return mapper.toDTO(repository.save(flower));
     }
 }

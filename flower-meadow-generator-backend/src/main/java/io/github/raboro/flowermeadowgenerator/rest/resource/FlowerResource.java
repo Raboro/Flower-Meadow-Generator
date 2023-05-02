@@ -2,11 +2,10 @@ package io.github.raboro.flowermeadowgenerator.rest.resource;
 
 import io.github.raboro.flowermeadowgenerator.businesslogic.FlowerBusinessLogic;
 import io.github.raboro.flowermeadowgenerator.rest.dto.FlowerDTO;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -23,5 +22,12 @@ public class FlowerResource {
     @Produces(MediaType.APPLICATION_JSON)
     public List<FlowerDTO> getAll() {
         return logic.getAll();
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public FlowerDTO addFlower(@RequestBody FlowerDTO flowerDTO) {
+        return logic.addFlower(flowerDTO);
     }
 }
