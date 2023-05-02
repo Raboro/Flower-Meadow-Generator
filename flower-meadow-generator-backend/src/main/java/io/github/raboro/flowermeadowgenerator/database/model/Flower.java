@@ -22,8 +22,7 @@ public class Flower implements Serializable {
 
     }
 
-    public Flower(long id, String name, byte[] image) {
-        this.id = id;
+    public Flower(String name, byte[] image) {
         this.name = name;
         this.image = image;
     }
