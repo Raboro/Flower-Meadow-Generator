@@ -29,4 +29,8 @@ public class FlowerBusinessLogic {
         Flower flower = mapper.toModel(flowerDTO);
         return mapper.toDTO(repository.save(flower));
     }
+
+    public void deleteFlower(long id) {
+        repository.deleteById(id);
+    }
 }
