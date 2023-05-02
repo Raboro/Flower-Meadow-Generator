@@ -40,4 +40,12 @@ public class FlowerResource {
         logic.deleteFlower(id);
         return Response.ok().build();
     }
+
+    @PUT
+    @Path("/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public FlowerDTO putFlower(@PathParam("id") long id, @RequestBody FlowerDTO flowerDTO) {
+        return logic.putFlower(id, flowerDTO);
+    }
 }

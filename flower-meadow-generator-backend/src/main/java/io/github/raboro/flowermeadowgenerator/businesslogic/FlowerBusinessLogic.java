@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Raboro
@@ -32,5 +33,19 @@ public class FlowerBusinessLogic {
 
     public void deleteFlower(long id) {
         repository.deleteById(id);
+    }
+
+    public FlowerDTO putFlower(long id, FlowerDTO flowerDTO) {
+        Optional<Flower> byId = repository.findById(id);
+        if (byId.isEmpty()) {
+            return mapper.toDTO(repository.save(mapper.toModel(flowerDTO)));
+        }
+        return putFlowerValid(flowerDTO, byId.get());
+    }
+
+    private FlowerDTO putFlowerValid(FlowerDTO flowerDTO, Flower byId) {
+        Flower flower = mapper.toModel(flowerDTO);
+        flower.setId(byId.getId());
+        return mapper.toDTO(repository.save(flower));
     }
 }
