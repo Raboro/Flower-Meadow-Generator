@@ -24,3 +24,17 @@ Just run the following command to start the two docker container: One for the Ja
 ````bash
 $ docker compose up
 ````
+
+## Reach the application
+
+After the starting process you can reach the container/services: <br>
+
+Get **frontend** ``index.html`` in the browser (uses port ``8082``):
+````
+http://localhost:8082/flowermeadowgenerator/index.html
+````
+
+Make calls to the **backend** flower endpoint (uses port ``8081``):
+````
+http://localhost:8081/flower
+````
