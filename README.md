@@ -29,9 +29,9 @@ $ docker compose up
 
 After the starting process you can reach the container/services: <br>
 
-Get **frontend** ``index.html`` in the browser (uses port ``8082``):
+Get **frontend** in the browser (uses port ``8082``):
 ````
-http://localhost:8082/flowermeadowgenerator/index.html
+http://localhost:8082/flowermeadowgenerator
 ````
 
 Make calls to the **backend** flower endpoint (uses port ``8081``):
