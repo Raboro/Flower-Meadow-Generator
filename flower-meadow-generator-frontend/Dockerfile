@@ -1,5 +1,5 @@
 FROM nginx:alpine
 
-COPY . /usr/share/nginx/flowermeadowgenerator
+COPY ./src /usr/share/nginx/flowermeadowgenerator
 
 EXPOSE 80

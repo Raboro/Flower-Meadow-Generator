@@ -6,7 +6,7 @@ services:
     depends_on:
       - "backend"
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./flower-meadow-generator-frontend/nginx.conf:/etc/nginx/conf.d/default.conf
     networks:
       my-network:
         aliases:
