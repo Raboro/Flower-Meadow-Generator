@@ -13,7 +13,9 @@ import java.io.IOException;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CorsFilter implements Filter {
 
-    public CorsFilter() {}
+    public CorsFilter() {
+        // not needed
+    }
 
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
@@ -32,9 +34,13 @@ public class CorsFilter implements Filter {
     }
 
     @Override
-    public void init(FilterConfig filterConfig) {}
+    public void init(FilterConfig filterConfig) {
+        // not needed
+    }
 
     @Override
-    public void destroy() {}
+    public void destroy() {
+        // not needed
+    }
 
 }
