@@ -1,5 +1,6 @@
 package io.github.raboro.flowermeadowgenerator.rest.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class FlowerDTO {
 
     long id;
@@ -21,18 +23,4 @@ public class FlowerDTO {
     private short petalHeight;
     private short petalWidth;
     private boolean petalThrones;
-
-    public FlowerDTO(long id, String name, String category, String stemColor, short stemHeight, short stemWidth, boolean stemThrones, String petalColor, short petalHeight, short petalWidth, boolean petalThrones) {
-        this.id = id;
-        this.name = name;
-        this.category = category;
-        this.stemColor = stemColor;
-        this.stemHeight = stemHeight;
-        this.stemWidth = stemWidth;
-        this.stemThrones = stemThrones;
-        this.petalColor = petalColor;
-        this.petalHeight = petalHeight;
-        this.petalWidth = petalWidth;
-        this.petalThrones = petalThrones;
-    }
 }
