@@ -84,3 +84,21 @@
     scale: 1.04;
     transition-duration: .6s;
 }
+
+.addFlowerContainer {
+    transition-duration: 2s;
+    display: none;
+    min-height: 50vh;
+    margin: 0 .7vw;
+    grid-template-areas:
+        'fpName fpCategory'
+        'fpStemColor fpStemheight'
+        'fpStemWidth fpStemThrones'
+        'fpPetalColor fpPetalheight'
+        'fpPetalWidth fpPetalThrones'
+        'addFlowerButton addFlowerButton';
+}
+
+.addFlowerContainer.show {
+    display: grid;
+}
