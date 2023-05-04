@@ -5,16 +5,20 @@
 }
 
 .gridContainer {
-    background-color: rgba(239, 248, 226, 0.65);
+    margin: 0 .7vw;
     display: grid;
-    gap: 1fr;
+    grid-gap: 2vw;
     grid-template-areas:
-        'header';
+        'header'
+        'add';
+}
+
+.gridItem {
+    min-height: 10vh;
 }
 
 .gridItem:nth-child(1) {
     grid-area: header;
-    min-height: 10vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -22,14 +26,13 @@
 
 .headingShadow {
     text-shadow: 2px 2px 5px #ffb6c1,
-        6px 6px 5px #e5a2ad,
-        9px 9px 5px #c48b94,
-        12px 12px 6px #ad7983;
+    6px 6px 5px #e5a2ad;
     font-weight: 400;
     text-transform: uppercase;
     font-size: calc(2rem + 5vw);
     text-align: center;
     margin-top: 3vh;
     color: #ffb6c1;
-    letter-spacing: 0.5rem;
+    letter-spacing: .5rem;
+    transition-duration: 1.6s;
 }
