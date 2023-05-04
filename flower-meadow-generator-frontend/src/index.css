@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .gridContainer {
     background-color: rgba(239, 248, 226, 0.65);
     display: grid;
@@ -16,10 +22,9 @@
 
 .headingShadow {
     text-shadow: 2px 2px 5px #ffb6c1,
-                 6px 6px 5px #e5a2ad,
-                 9px 9px 5px #c48b94,
-                 12px 12px 6px #ad7983;
-    font-family: sans-serif;
+        6px 6px 5px #e5a2ad,
+        9px 9px 5px #c48b94,
+        12px 12px 6px #ad7983;
     font-weight: 400;
     text-transform: uppercase;
     font-size: calc(2rem + 5vw);
