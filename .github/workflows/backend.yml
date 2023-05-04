@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: start db container
-        run: ./startDb.sh
+        run: startDb.sh
       - name: Check db container
         run: |
           docker ps
