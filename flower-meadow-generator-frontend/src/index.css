@@ -58,7 +58,6 @@
 }
 
 .gridItem:nth-child(2):hover {
-    scale: 1.002;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px,
     rgba(0, 0, 0, 0.1) 0 4px 12px;
     transition-duration: .6s;
