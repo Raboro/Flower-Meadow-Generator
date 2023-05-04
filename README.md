@@ -1,4 +1,13 @@
-# Flower-Meadow-Generator
+````bash
+#    ______ _                          __  __                _                  _____                           _             
+#   |  ____| |                        |  \/  |              | |                / ____|                         | |            
+#   | |__  | | _____      _____ _ __  | \  / | ___  __ _  __| | _____      __ | |  __  ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
+#   |  __| | |/ _ \ \ /\ / / _ \ '__| | |\/| |/ _ \/ _` |/ _` |/ _ \ \ /\ / / | | |_ |/ _ \ '_ \ / _ \ '__/ _` | __/ _ \| '__|
+#   | |    | | (_) \ V  V /  __/ |    | |  | |  __/ (_| | (_| | (_) \ V  V /  | |__| |  __/ | | |  __/ | | (_| | || (_) | |   
+#   |_|    |_|\___/ \_/\_/ \___|_|    |_|  |_|\___|\__,_|\__,_|\___/ \_/\_/    \_____|\___|_| |_|\___|_|  \__,_|\__\___/|_|                                                    
+````
+    
+                                                                                                                                                                                                                                                      
 
 [![GNU GPL 3.0 License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/Raboro/Flower-Meadow-Generator/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/Raboro/Flower-Meadow-Generator.svg)](https://github.com/Raboro/Flower-Meadow-Generator/issues)
