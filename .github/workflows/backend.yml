@@ -10,16 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
-      db:
-        image: postgres:13.1-alpine
-        env:
-          POSTGRES_USER: f-m-generator-user
-          POSTGRES_PASSWORD: test1234
-        ports:
-          - 5432:5432
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
-
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -31,9 +21,6 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
         working-directory: flower-meadow-generator-backend
-      - name: Stop PostgreSQL container
-        if: always()
-        run: docker stop $(docker ps -q --filter ancestor=postgres)
 
   sonar:
     runs-on: ubuntu-latest
