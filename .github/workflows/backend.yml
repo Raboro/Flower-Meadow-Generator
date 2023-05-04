@@ -31,7 +31,7 @@ jobs:
           distribution: "temurin"
           cache: maven
       - name: Build with Maven
-        run: mvn clean package -Dspring.datasource.url=jdbc:postgresql://db:5432/f-m-generator-user
+        run: mvn -B package --file pom.xml
         working-directory: flower-meadow-generator-backend
       - name: Stop PostgreSQL container
         if: always()
