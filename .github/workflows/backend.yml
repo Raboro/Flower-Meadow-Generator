@@ -33,7 +33,7 @@ jobs:
         working-directory: flower-meadow-generator-backend
       - name: Stop PostgreSQL container
         if: always()
-        run: docker stop $(docker ps -q --filter ancestor=db)
+        run: docker stop $(docker ps -q --filter ancestor=postgres)
 
   sonar:
     runs-on: ubuntu-latest
