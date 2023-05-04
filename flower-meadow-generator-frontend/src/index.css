@@ -89,7 +89,7 @@
     transition-duration: 2s;
     display: none;
     min-height: 50vh;
-    margin: 0 .7vw;
+    margin: 0 4vw 5vh;
     grid-template-areas:
         'fpName fpCategory'
         'fpStemColor fpStemheight'
@@ -99,6 +99,66 @@
         'addFlowerButton addFlowerButton';
 }
 
+.addFlowerItem {
+    border: 3px solid rgba(201, 222, 183, 0.9);
+    margin: 1vh;
+    border-radius: 10px;
+}
+
 .addFlowerContainer.show {
     display: grid;
 }
+
+.addFlowerItem:nth-child(1) {
+    grid-area: fpName;
+}
+
+.addFlowerItem:nth-child(2) {
+    grid-area: fpCategory;
+}
+
+.addFlowerItem:nth-child(3) {
+    grid-area: fpStemColor;
+}
+
+.addFlowerItem:nth-child(4) {
+    grid-area: fpStemheight;
+}
+
+.addFlowerItem:nth-child(5) {
+    grid-area: fpStemWidth;
+}
+
+.addFlowerItem:nth-child(6) {
+    grid-area: fpStemThrones;
+}
+
+.addFlowerItem:nth-child(7) {
+    grid-area: fpPetalColor;
+}
+
+.addFlowerItem:nth-child(8) {
+    grid-area: fpPetalheight;
+}
+
+.addFlowerItem:nth-child(9) {
+    grid-area: fpPetalWidth;
+}
+
+.addFlowerItem:nth-child(10) {
+    grid-area: fpPetalThrones;
+}
+
+.addFlowerItem:nth-child(11) {
+    grid-area: addFlowerButton;
+    margin: 0 10vw -5vh;
+    border: none;
+}
+
+.addFlowerItem:nth-child(11) > button {
+    margin-left: 47%;
+    margin-top: 3vh;
+
+}
+
+
