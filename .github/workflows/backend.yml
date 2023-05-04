@@ -12,9 +12,7 @@ jobs:
 
     steps:
       - name: start db container
-        run: |
-          ls
-          cd ${GITHUB_WORKSPACE} && ./startDb.sh
+        run: cd ${GITHUB_WORKSPACE} && ./startDb.sh
       - name: Check db container
         run: |
           docker ps
