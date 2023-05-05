@@ -22,12 +22,14 @@ jobs:
         working-directory: flower-meadow-generator-frontend
       - name: Commit changes
         run: |
-          git config --global user.name ${{ secrets.GH_USER_NAME }}
-          git config --global user.email ${{ secrets.GH_USER_EMAIL }}
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
           git commit -am "fixed eslint issues"
-          git push https://Raboro:$GITHUB_TOKEN@github.com/Raboro/Flower-Meadow-Generator.git
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
       - name: Run eslint
         run: npm run lint
         working-directory: flower-meadow-generator-frontend
