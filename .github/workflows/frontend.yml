@@ -22,8 +22,6 @@ jobs:
         working-directory: flower-meadow-generator-frontend
       - name: Commit changes
         run: |
-          git config --global user.name 'github-action'
-          git config --global user.email 'github-action@github.com'
           git commit -am "fixed eslint issues"
           git push https://${{secrets.GITHUB_TOKEN}}@github.com/Raboro/Flower-Meadow-Generator.git HEAD:main
       - name: Run eslint
