@@ -19,6 +19,6 @@ jobs:
         working-directory: flower-meadow-generator-frontend
       - name: Lint analysis
         run: |
-          npm run lint --fix
+          npm run lint
           git status
         working-directory: flower-meadow-generator-frontend
