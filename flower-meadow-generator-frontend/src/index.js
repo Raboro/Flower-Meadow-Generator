@@ -20,16 +20,16 @@ function addFlower() {
 
 function createFlower() {
     return {
-        "name": document.getElementById("addFlowerName").textContent,
-        "category": document.getElementById("addFlowerCategory").textContent,
-        "stemColor": document.getElementById("addFlowerStemColor").value,
-        "stemHeight": document.getElementById("addFlowerStemHeight").value,
-        "stemWidth": document.getElementById("addFlowerStemWidth").value,
-        "stemThrones": document.getElementById("addFlowerStemThrones").checked,
-        "PetalColor": document.getElementById("addFlowerPetalColor").value,
-        "PetalHeight": document.getElementById("addFlowerPetalHeight").value,
-        "PetalWidth": document.getElementById("addFlowerPetalWidth").value,
-        "PetalThrones": document.getElementById("addFlowerPetalThrones").checked,
+        name: document.getElementById('addFlowerName').textContent,
+        category: document.getElementById('addFlowerCategory').textContent,
+        stemColor: document.getElementById('addFlowerStemColor').value,
+        stemHeight: document.getElementById('addFlowerStemHeight').value,
+        stemWidth: document.getElementById('addFlowerStemWidth').value,
+        stemThrones: document.getElementById('addFlowerStemThrones').checked,
+        PetalColor: document.getElementById('addFlowerPetalColor').value,
+        PetalHeight: document.getElementById('addFlowerPetalHeight').value,
+        PetalWidth: document.getElementById('addFlowerPetalWidth').value,
+        PetalThrones: document.getElementById('addFlowerPetalThrones').checked
     };
 }
 
