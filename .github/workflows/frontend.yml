@@ -19,6 +19,7 @@ jobs:
         working-directory: flower-meadow-generator-frontend
       - name: Fix eslint issues
         run: npm run lint-fix
+        working-directory: flower-meadow-generator-frontend
       - name: Commit changes
         run: |
           git config --global user.name 'github-action'
