@@ -151,14 +151,31 @@
 
 .addFlowerItem:nth-child(11) {
     grid-area: addFlowerButton;
-    margin: 0 10vw -5vh;
     border: none;
-}
-
-.addFlowerItem:nth-child(11) > button {
-    margin-left: 47%;
     margin-top: 3vh;
-
+    margin-bottom: -5vh;
 }
 
+.centerAddButton {
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addButton {
+    background-color: rgba(201, 222, 183, 0.19);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    transition-duration: .6s;
+    padding: 1vh 3vw;
+    border: 3px solid rgba(201, 222, 183, 0.9);
+    border-radius: 10px;
+}
+
+.addButton:hover {
+    transition-duration: .6s;
+    scale: 1.005;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px,
+    rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
 
