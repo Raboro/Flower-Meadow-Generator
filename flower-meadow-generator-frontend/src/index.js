@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 function toggleAddFlower() {
     const elementsByClassName = document.getElementById('addFlowerContainer');
-    if (elementsByClassName.className.endsWith('show')) {
+    if (elementsByClassName.className.endsWith("show")) {
         elementsByClassName.classList.remove('show');
     } else {
         elementsByClassName.classList.add('show');
