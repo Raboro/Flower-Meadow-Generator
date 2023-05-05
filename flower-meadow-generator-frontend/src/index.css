@@ -100,6 +100,10 @@
 }
 
 .addFlowerItem {
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 3px solid rgba(201, 222, 183, 0.9);
     margin: 1vh;
     border-radius: 10px;
@@ -152,15 +156,11 @@
 .addFlowerItem:nth-child(11) {
     grid-area: addFlowerButton;
     border: none;
-    margin-top: 3vh;
-    margin-bottom: -5vh;
+    margin-bottom: -3vh;
 }
 
 .centerAddButton {
-    top: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .addButton {
