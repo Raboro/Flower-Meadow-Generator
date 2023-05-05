@@ -17,8 +17,12 @@ jobs:
       - name: Install dependnecies
         run: npm ci
         working-directory: flower-meadow-generator-frontend
-      - name: Lint analysis
+      - name: Lint analysis with fix push
         run: |
+          npm run lint-fix
+          git config --global user.name 'github-action'
+          git config --global user.email 'github-action@github.com'
+          git commit -am "fixed eslint issues"
+          git push
           npm run lint
-          git status
         working-directory: flower-meadow-generator-frontend

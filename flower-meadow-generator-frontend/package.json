@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint --fix src ; exit 0"
+    "lint-fix": "npx eslint --fix src ; exit 0",
+    "lint": "npx eslint src"
   },
   "keywords": [],
   "author": "Marius Wörfel",
