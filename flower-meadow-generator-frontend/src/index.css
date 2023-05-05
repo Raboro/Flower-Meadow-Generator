@@ -92,10 +92,10 @@
     margin: 0 4vw 5vh;
     grid-template-areas:
         'fpName fpCategory'
-        'fpStemColor fpStemheight'
-        'fpStemWidth fpStemThrones'
-        'fpPetalColor fpPetalheight'
-        'fpPetalWidth fpPetalThrones'
+        'fpStemColor fpPetalColor'
+        'fpStemHeight fpPetalHeight'
+        'fpStemWidth fpPetalWidth'
+        'fpStemThrones fpPetalThrones'
         'addFlowerButton addFlowerButton';
 }
 
@@ -122,7 +122,7 @@
 }
 
 .addFlowerItem:nth-child(4) {
-    grid-area: fpStemheight;
+    grid-area: fpStemHeight;
 }
 
 .addFlowerItem:nth-child(5) {
@@ -138,7 +138,7 @@
 }
 
 .addFlowerItem:nth-child(8) {
-    grid-area: fpPetalheight;
+    grid-area: fpPetalHeight;
 }
 
 .addFlowerItem:nth-child(9) {
