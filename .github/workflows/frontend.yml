@@ -1,0 +1,22 @@
+name: Frontend CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  linter:
+    name: Linter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependnecies
+        run: npm ci
+        working-directory: flower-meadow-generator-frontend
+      - name: Lint analysis
+        run: npm run lint
+        working-directory: flower-meadow-generator-frontend
