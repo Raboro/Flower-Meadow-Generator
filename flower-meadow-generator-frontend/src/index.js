@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 function toggleAddFlower() {
     const elementsByClassName = document.getElementById('addFlowerContainer');
     if (elementsByClassName.className.endsWith('show')) {
@@ -7,6 +8,7 @@ function toggleAddFlower() {
     }
 }
 
+// eslint-disable-next-line no-unused-vars
 function test() {
     fetch('http://localhost:8081/flower')
         .then(response => response.json())
