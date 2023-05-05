@@ -2,7 +2,7 @@
 function toggleAddFlower() {
     const elementsByClassName = document.getElementById('addFlowerContainer');
     if (elementsByClassName.className.endsWith('show')) {
-        elementsByClassName.classList.remove("show");
+        elementsByClassName.classList.remove('show');
     } else {
         elementsByClassName.classList.add('show');
     }
