@@ -17,12 +17,14 @@ jobs:
       - name: Install dependnecies
         run: npm ci
         working-directory: flower-meadow-generator-frontend
-      - name: Lint analysis with fix push
+      - name: Fix eslint issues
+        run: npm run lint-fix
+      - name: Commit changes
         run: |
-          npm run lint-fix
           git config --global user.name 'github-action'
           git config --global user.email 'github-action@github.com'
           git commit -am "fixed eslint issues"
-          git push
-          npm run lint
+          git push https://$GH_TOKEN_PUSH_LINT_CHANGES@github.com/Raboro/Flower-Meadow-Generator.git HEAD:main
+      - name: Run eslint
+        run: npm run lint
         working-directory: flower-meadow-generator-frontend
