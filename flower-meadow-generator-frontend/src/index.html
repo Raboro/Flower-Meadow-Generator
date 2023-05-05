@@ -11,93 +11,93 @@
 </head>
 
 <body>
-    <div class="gridContainer">
+<div class="gridContainer">
 
-        <div class="gridItem">
-            <h2 class="headingShadow">
-                Flower Meadow Generator
-            </h2>
-        </div>
-
-        <div class="gridItem">
-
-            <div class="addFlexbox">
-                <h3>Add Flower</h3>
-                <a href="#addFlowerContainer" onclick="toggleAddFlower()" class="expandIcon"></a>
-            </div>
-
-            <div class="addFlowerContainer" id="addFlowerContainer">
-
-                <div class="addFlowerItem">
-                    <label>
-                        <input type="text" placeholder="Name" />
-                    </label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <label>
-                        <input type="text" placeholder="Category" />
-                    </label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <label>Stem color
-                        <input type="color" />
-                    </label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <label>
-                        <input type="number" placeholder="Stem height" />
-                    </label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <label>
-                        <input type="number" placeholder="Stem width" />
-                    </label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <input id="Stem thrones" type="checkbox" />
-                    <label for="Stem thrones">Stem thrones</label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <label>Petal color
-                        <input type="color" />
-                    </label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <label>
-                        <input type="number" placeholder="Petal width" />
-                    </label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <label>
-                        <input type="number" placeholder="Petal width" />
-                    </label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <input id="Petal thrones" type="checkbox" />
-                    <label for="Petal thrones">Petal thrones</label>
-                </div>
-
-                <div class="addFlowerItem">
-                    <div class="centerAddButton">
-                        <button class="addButton"><b>Add</b></button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
+    <div class="gridItem">
+        <h2 class="headingShadow">
+            Flower Meadow Generator
+        </h2>
     </div>
-    <br>
-    <button onclick="test()">Test</button>
+
+    <div class="gridItem">
+
+        <div class="addFlexbox">
+            <h3>Add Flower</h3>
+            <a href="#addFlowerContainer" onclick="toggleAddFlower()" class="expandIcon"></a>
+        </div>
+
+        <div class="addFlowerContainer" id="addFlowerContainer">
+
+            <div class="addFlowerItem">
+                <label>
+                    <input id="addFlowerName" type="text" placeholder="Name"/>
+                </label>
+            </div>
+
+            <div class="addFlowerItem">
+                <label>
+                    <input id="addFlowerCategory" type="text" placeholder="Category"/>
+                </label>
+            </div>
+
+            <div class="addFlowerItem">
+                <label>Stem color
+                    <input id="addFlowerStemColor" type="color"/>
+                </label>
+            </div>
+
+            <div class="addFlowerItem">
+                <label>
+                    <input id="addFlowerStemHeight" type="number" placeholder="Stem height"/>
+                </label>
+            </div>
+
+            <div class="addFlowerItem">
+                <label>
+                    <input id="addFlowerStemWidth" type="number" placeholder="Stem width"/>
+                </label>
+            </div>
+
+            <div class="addFlowerItem">
+                <input id="addFlowerStemThrones" type="checkbox"/>
+                <label for="addFlowerStemThrones">Stem thrones</label>
+            </div>
+
+            <div class="addFlowerItem">
+                <label>Petal color
+                    <input id="addFlowerPetalColor" type="color"/>
+                </label>
+            </div>
+
+            <div class="addFlowerItem">
+                <label>
+                    <input id="addFlowerPetalHeight" type="number" placeholder="Petal height"/>
+                </label>
+            </div>
+
+            <div class="addFlowerItem">
+                <label>
+                    <input id="addFlowerPetalWidth" type="number" placeholder="Petal width"/>
+                </label>
+            </div>
+
+            <div class="addFlowerItem">
+                <input id="addFlowerPetalThrones" type="checkbox"/>
+                <label for="addFlowerPetalThrones">Petal thrones</label>
+            </div>
+
+            <div class="addFlowerItem">
+                <div class="centerAddButton">
+                    <button onclick="addFlower()" class="addButton"><b>Add</b></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<br>
+<button onclick="test()">Test</button>
 </body>
 
 <script src="index.js"></script>
