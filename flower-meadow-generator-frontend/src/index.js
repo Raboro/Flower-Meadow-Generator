@@ -20,21 +20,23 @@ function addFlower() {
 
 function createFlower() {
     return {
-        "name": document.getElementById("addFlowerName").textContent,
-        "category": document.getElementById("addFlowerCategory").textContent,
+        "name": document.getElementById("addFlowerName").value,
+        "category": document.getElementById("addFlowerCategory").value,
         "stemColor": document.getElementById("addFlowerStemColor").value,
         "stemHeight": document.getElementById("addFlowerStemHeight").value,
         "stemWidth": document.getElementById("addFlowerStemWidth").value,
         "stemThrones": document.getElementById("addFlowerStemThrones").checked,
-        "PetalColor": document.getElementById("addFlowerPetalColor").value,
-        "PetalHeight": document.getElementById("addFlowerPetalHeight").value,
-        "PetalWidth": document.getElementById("addFlowerPetalWidth").value,
-        "PetalThrones": document.getElementById("addFlowerPetalThrones").checked,
+        "petalColor": document.getElementById("addFlowerPetalColor").value,
+        "petalHeight": document.getElementById("addFlowerPetalHeight").value,
+        "petalWidth": document.getElementById("addFlowerPetalWidth").value,
+        "petalThrones": document.getElementById("addFlowerPetalThrones").checked,
     };
 }
 
 function isInvalid(flower) {
-    // implement
+    const isEmpty = flower.name === '' || flower.category === '';
+    const isToLow = flower.stemWidth < 1 || flower.stemHeight < 1 ||  flower.petalWidth < 1 || flower.petalHeight < 1;
+    return isEmpty || isToLow;
 }
 
 function handleInvalidFlower(flower) {
