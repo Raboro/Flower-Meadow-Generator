@@ -15,7 +15,7 @@ function addFlower() {
         handleInvalidFlower();
         return;
     }
-    sendValidFlower();
+    sendValidFlower(flower);
 }
 
 function createFlower() {
@@ -35,7 +35,7 @@ function createFlower() {
 
 function isInvalid(flower) {
     const isEmpty = flower.name === '' || flower.category === '';
-    const isToLow = flower.stemWidth < 1 || flower.stemHeight < 1 ||  flower.petalWidth < 1 || flower.petalHeight < 1;
+    const isToLow = flower.stemWidth < 1 || flower.stemHeight < 1 || flower.petalWidth < 1 || flower.petalHeight < 1;
     return isEmpty || isToLow;
 }
 
@@ -44,7 +44,15 @@ function handleInvalidFlower(flower) {
 }
 
 function sendValidFlower(flower) {
-    // implement
+    console.log(JSON.stringify(flower))
+    fetch('http://localhost:8081/flower', {
+        method: 'POST',
+        body: JSON.stringify(flower),
+        headers: {
+            "Accept": 'application/json',
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
 }
 
 // eslint-disable-next-line no-unused-vars
