@@ -28,7 +28,7 @@ function createFlower() {
         stemThrones: document.getElementById('addFlowerStemThrones').checked,
         petalColor: document.getElementById('addFlowerPetalColor').value,
         petalHeight: document.getElementById('addFlowerPetalHeight').value,
-        petalWidth: document.getElementById('addFlowerPetalWidth').value,
+        petalWidth: document.getElementById('addFlowerPetalWidth').value
     };
 }
 
@@ -43,13 +43,13 @@ function handleInvalidFlower(flower) {
 }
 
 function sendValidFlower(flower) {
-    console.log(JSON.stringify(flower))
+    console.log(JSON.stringify(flower));
     fetch('http://localhost:8081/flower', {
         method: 'POST',
         body: JSON.stringify(flower),
         headers: {
-            "Accept": 'application/json',
-            "Content-type": "application/json; charset=UTF-8"
+            Accept: 'application/json',
+            'Content-type': 'application/json; charset=UTF-8'
         }
     });
 }
