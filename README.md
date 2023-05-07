@@ -33,6 +33,18 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Backend&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Backend)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Backend&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Backend)
 
+[![Powered by](https://img.shields.io/badge/powered%20by%20javascript-black.svg?logo=Javascript&logoColor=yellow)]()
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=bugs)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=coverage)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
+
 ---
 ## Run the application
 
