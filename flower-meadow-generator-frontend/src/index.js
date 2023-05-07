@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 function toggleAddFlower() {
     clearValidation();
-    toggleContainer('addFlowerContainer')
+    toggleContainer('addFlowerContainer');
 }
 
 function toggleContainer(containerName) {
@@ -70,5 +70,5 @@ function sendValidFlower(flower) {
 
 // eslint-disable-next-line no-unused-vars
 function toggleOverviewFlower() {
-    toggleContainer('overviewFlowerContainer')
+    toggleContainer('overviewFlowerContainer');
 }
