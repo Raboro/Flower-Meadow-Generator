@@ -65,6 +65,16 @@ function sendValidFlower(flower) {
 }
 
 // eslint-disable-next-line no-unused-vars
+function toggleOverviewFlower() {
+    const elementsByClassName = document.getElementById('overviewFlowerContainer');
+    if (elementsByClassName.className.endsWith('show')) {
+        elementsByClassName.classList.remove('show');
+    } else {
+        elementsByClassName.classList.add('show');
+    }
+}
+
+// eslint-disable-next-line no-unused-vars
 function test() {
     fetch('http://localhost:8081/flower')
         .then(response => response.json())
