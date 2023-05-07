@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 function toggleAddFlower() {
+    clearValidation();
     const elementsByClassName = document.getElementById('addFlowerContainer');
     if (elementsByClassName.className.endsWith('show')) {
         elementsByClassName.classList.remove('show');
@@ -8,8 +9,11 @@ function toggleAddFlower() {
     }
 }
 
+const clearValidation = () => document.getElementById('showValidation').innerText = '';
+
 // eslint-disable-next-line no-unused-vars
 function addFlower() {
+    clearValidation();
     const flower = createFlower();
     if (isInvalid(flower)) {
         handleInvalidFlower();
@@ -38,8 +42,12 @@ function isInvalid(flower) {
     return isEmpty || isToLow;
 }
 
-function handleInvalidFlower(flower) {
-    // implement
+const handleInvalidFlower = () => editFlowerStatus('Invalid Flower', 'red');
+
+function editFlowerStatus(text, color) {
+    const element = document.getElementById('showValidation');
+    element.innerText = text;
+    element.style.color = color;
 }
 
 function sendValidFlower(flower) {
@@ -51,6 +59,7 @@ function sendValidFlower(flower) {
             'Content-type': 'application/json; charset=UTF-8'
         }
     }).catch(error => console.log(error));
+    editFlowerStatus('valid Flower', 'green');
 }
 
 // eslint-disable-next-line no-unused-vars
