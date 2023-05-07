@@ -43,7 +43,6 @@ function handleInvalidFlower(flower) {
 }
 
 function sendValidFlower(flower) {
-    console.log(JSON.stringify(flower));
     fetch('http://localhost:8081/flower', {
         method: 'POST',
         body: JSON.stringify(flower),
@@ -51,7 +50,7 @@ function sendValidFlower(flower) {
             Accept: 'application/json',
             'Content-type': 'application/json; charset=UTF-8'
         }
-    });
+    }).catch(error => console.log(error));
 }
 
 // eslint-disable-next-line no-unused-vars
