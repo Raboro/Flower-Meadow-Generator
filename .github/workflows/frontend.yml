@@ -34,3 +34,21 @@ jobs:
       - name: Run eslint
         run: npm run lint
         working-directory: flower-meadow-generator-frontend
+
+  sonar:
+    name: SonarCloud analysis
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: SonarCloud Frontend Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_FRONTEND }}
+        with:
+          projectBaseDir: flower-meadow-generator-frontend
+          args: >
+            -Dsonar.organization=raboro
+            -Dsonar.projectKey=raboro_Flower-Meadow-Generator_Frontend
