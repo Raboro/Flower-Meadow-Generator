@@ -1,7 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 function toggleAddFlower() {
     clearValidation();
-    const elementsByClassName = document.getElementById('addFlowerContainer');
+    toggleContainer('addFlowerContainer')
+}
+
+function toggleContainer(containerName) {
+    const elementsByClassName = document.getElementById(containerName);
     if (elementsByClassName.className.endsWith('show')) {
         elementsByClassName.classList.remove('show');
     } else {
@@ -66,12 +70,7 @@ function sendValidFlower(flower) {
 
 // eslint-disable-next-line no-unused-vars
 function toggleOverviewFlower() {
-    const elementsByClassName = document.getElementById('overviewFlowerContainer');
-    if (elementsByClassName.className.endsWith('show')) {
-        elementsByClassName.classList.remove('show');
-    } else {
-        elementsByClassName.classList.add('show');
-    }
+    toggleContainer('overviewFlowerContainer')
 }
 
 // eslint-disable-next-line no-unused-vars
