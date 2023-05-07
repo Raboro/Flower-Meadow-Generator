@@ -177,7 +177,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 
-.addFlowerContainer.show {
+.addFlowerContainer.show, .overviewFlowerContainer.show {
     display: grid;
 }
 
@@ -260,10 +260,6 @@ input[type="color"]::-webkit-color-swatch {
     display: none;
     min-height: 50vh;
     margin: 0 4vw 5vh;
-}
-
-.overviewFlowerContainer.show {
-    display: grid;
 }
 
 @media only screen and (max-width: 1000px) {
