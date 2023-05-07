@@ -72,15 +72,3 @@ function sendValidFlower(flower) {
 function toggleOverviewFlower() {
     toggleContainer('overviewFlowerContainer')
 }
-
-// eslint-disable-next-line no-unused-vars
-function test() {
-    fetch('http://localhost:8081/flower')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-}
