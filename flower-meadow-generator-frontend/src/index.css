@@ -97,11 +97,14 @@
     transition-duration: .6s;
 }
 
-.addFlowerContainer {
+.addFlowerContainer, .overviewFlowerContainer {
     transition-duration: 2s;
     display: none;
     min-height: 50vh;
     margin: 0 4vw 5vh;
+}
+
+.addFlowerContainer {
     grid-template-areas:
         'fpName fpCategory'
         'fpStemColor fpPetalColor'
@@ -253,13 +256,6 @@ input[type="color"]::-webkit-color-swatch {
     align-items: center;
     justify-content: space-between;
     margin: 0 1vw;
-}
-
-.overviewFlowerContainer {
-    transition-duration: 2s;
-    display: none;
-    min-height: 50vh;
-    margin: 0 4vw 5vh;
 }
 
 @media only screen and (max-width: 1000px) {
