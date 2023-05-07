@@ -9,7 +9,9 @@ function toggleAddFlower() {
     }
 }
 
-const clearValidation = () => document.getElementById('showValidation').innerText = '';
+function clearValidation() {
+    document.getElementById('showValidation').innerText = '';
+}
 
 // eslint-disable-next-line no-unused-vars
 function addFlower() {
