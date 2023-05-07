@@ -71,7 +71,7 @@
     transition-duration: .6s;
 }
 
-.addFlexbox {
+.addFlexbox, .overviewFlexbox {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -248,14 +248,6 @@ input[type="color"]::-webkit-color-swatch {
     scale: 1.005;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px,
     rgba(0, 0, 0, 0.1) 0 4px 12px;
-}
-
-.overviewFlexbox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 1vw;
 }
 
 @media only screen and (max-width: 1000px) {
