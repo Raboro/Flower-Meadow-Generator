@@ -68,8 +68,6 @@ function sendValidFlower(flower) {
     editFlowerStatus('valid Flower', 'green');
 }
 
-
-
 // eslint-disable-next-line no-unused-vars
 async function toggleOverviewFlower() {
     if (shouldLoadFlowers()) {
