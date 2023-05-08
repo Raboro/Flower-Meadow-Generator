@@ -68,7 +68,25 @@ function sendValidFlower(flower) {
     editFlowerStatus('valid Flower', 'green');
 }
 
+
+
 // eslint-disable-next-line no-unused-vars
-function toggleOverviewFlower() {
+async function toggleOverviewFlower() {
+    if (shouldLoadFlowers()) {
+        await fetchFlowers();
+    }
     toggleContainer('overviewFlowerContainer');
+}
+
+const shouldLoadFlowers = () => !document.getElementById('overviewFlowerContainer').className.endsWith('show');
+
+async function fetchFlowers() {
+    await fetch('http://localhost:8081/flower')
+        .then(result => result.json())
+        .then(flowers => loadFlowers(flowers))
+        .catch(error => console.error(error));
+}
+
+function loadFlowers(flowers) {
+
 }
