@@ -86,5 +86,46 @@ async function fetchFlowers() {
 }
 
 function loadFlowers(flowers) {
-    // implement
+    const flowerFlexbox = document.getElementById('overviewFlowerFlexbox');
+    while (flowerFlexbox.firstChild) {
+        flowerFlexbox.removeChild(flowerFlexbox.lastChild);
+    }
+    flowers.forEach(f => flowerFlexbox.appendChild(constructFlower(f)));
 }
+
+function constructFlower(flower) {
+    const flowerHtml = getFlowerTemplate().childNodes.item(1);
+    const name = document.createElement('H5');
+    name.textContent = flower.name;
+    const category = document.createElement('H5');
+    category.textContent = flower.category;
+    const stemColor = document.createElement('H5');
+    stemColor.textContent = flower.stemColor;
+    const stemHeight = document.createElement('H5');
+    stemHeight.textContent = flower.stemHeight;
+    const stemWidth = document.createElement('H5');
+    stemWidth.textContent = flower.stemWidth;
+    const stemThrones = document.createElement('H5');
+    stemThrones.textContent = flower.stemThrones;
+    const petalColor = document.createElement('H5');
+    petalColor.textContent = flower.petalColor;
+    const petalHeight = document.createElement('H5');
+    petalHeight.textContent = flower.petalHeight;
+    const petalWidth = document.createElement('H5');
+    petalWidth.textContent = flower.petalWidth;
+    const petalThrones = document.createElement('H5');
+    petalThrones.textContent = flower.petalThrones;
+    const flowerProperties = flowerHtml.querySelector('.flowerPropertiesOverview');
+    flowerProperties.appendChild(name);
+    flowerProperties.appendChild(category);
+    flowerProperties.appendChild(stemColor);
+    flowerProperties.appendChild(stemHeight);
+    flowerProperties.appendChild(stemWidth);
+    flowerProperties.appendChild(stemThrones);
+    flowerProperties.appendChild(petalColor);
+    flowerProperties.appendChild(petalWidth);
+    flowerProperties.appendChild(petalThrones);
+    return flowerHtml;
+}
+
+const getFlowerTemplate = () => document.getElementById('flowerTemplate').content.cloneNode(true);
