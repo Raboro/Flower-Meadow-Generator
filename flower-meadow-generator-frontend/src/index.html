@@ -105,7 +105,7 @@
 
         <div class="overviewFlowerContainer" id="overviewFlowerContainer">
 
-            <div class="overviewFlowerFlexbox">
+            <div class="overviewFlowerFlexbox" id="overviewFlowerFlexbox">
                 <!-- insert flowers -->
             </div>
 
@@ -113,18 +113,20 @@
     </div>
 </div>
 
-<template class="flower">
-    <div class="previewCircleFlower"></div>
-    <div class="flowerPropertiesOverview">
-        <!-- 10 h5 for flower property -->
-    </div>
-    <div class="buttonContainer dropTask">
-        <button class="buttonTask delete">
-            <i class="fa-solid dropTask fa-circle-xmark" style="font-size:20px;color:red;"></i>
-        </button>
-        <button class="buttonTask edit">
-            <i class="fa-solid dropTask fa-pen" style="color:black;"></i>
-        </button>
+<template id="flowerTemplate">
+    <div class="flower">
+        <div class="previewCircleFlower"></div>
+        <div class="flowerPropertiesOverview">
+            <!-- 10 h5 for flower property -->
+        </div>
+        <div class="buttonContainer dropTask">
+            <button class="buttonTask delete">
+                <i class="fa-solid dropTask fa-circle-xmark" style="font-size:20px;color:red;"></i>
+            </button>
+            <button class="buttonTask edit">
+                <i class="fa-solid dropTask fa-pen" style="color:black;"></i>
+            </button>
+        </div>
     </div>
 </template>
 
