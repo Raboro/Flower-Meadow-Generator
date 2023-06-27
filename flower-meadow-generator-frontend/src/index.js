@@ -110,9 +110,16 @@ function constructProperties(flower) {
 }
 
 const constructProperty = (property) => {
-    const htmlElement = document.createElement('H5');
-    htmlElement.textContent = property[0] + ': ' + property[1];
-    return htmlElement;
+    const div = document.createElement('div');
+    const description = document.createElement('p');
+    description.textContent = property[0] + '-';
+    const content = document.createElement('p');
+    content.textContent = property[1];
+    content.style.fontWeight = 'bold';
+    div.appendChild(description);
+    div.appendChild(content);
+    div.classList.add('flowerProperty');
+    return div;
 };
 
 const getFlowerTemplate = () => document.getElementById('flowerTemplate').content.cloneNode(true);
