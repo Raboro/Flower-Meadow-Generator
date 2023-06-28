@@ -1,0 +1,3 @@
+*.sql             linguist-language=SQL
+*.dockerfile      linguist-language=Dockerfile
+Makefile          linguist-language=Makefile
