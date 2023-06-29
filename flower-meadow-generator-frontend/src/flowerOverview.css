@@ -107,6 +107,7 @@
 .add {
     float: left;
     padding: 3px;
+    margin-right: 25%;
 }
 
 .remove {
@@ -118,7 +119,7 @@
 .edit {
     float: right;
     padding: 3px;
-    margin-left: 59%;
+    margin-left: 25%;
 }
 
 .delete {
