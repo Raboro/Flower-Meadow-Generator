@@ -92,7 +92,6 @@
 .buttonTask {
     opacity: 0.7;
     transition-duration: 0.2s;
-    float: right;
     background: none;
     margin: 0.25vh;
     border: none;
@@ -105,11 +104,26 @@
     transform: translateY(-2px);
 }
 
-.edit {
+.add {
+    float: left;
     padding: 3px;
 }
 
-.delete {
+.remove {
+    float: left;
     padding: 0;
     background: none;
+}
+
+.edit {
+    float: right;
+    padding: 3px;
+    margin-left: 59%;
+}
+
+.delete {
+    float: right;
+    padding: 0;
+    background: none;
+    margin-right: 3%;
 }
