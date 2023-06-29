@@ -97,6 +97,7 @@ function constructFlower(flower) {
     const properties = constructProperties(flower);
     const flowerHtml = getFlowerTemplate().childNodes.item(1);
     const flowerProperties = flowerHtml.querySelector('.flowerPropertiesOverview');
+    addActionListenerToFlower(flowerHtml);
     properties.forEach(property => flowerProperties.appendChild(property));
     return flowerHtml;
 }
@@ -123,3 +124,12 @@ const constructProperty = (property) => {
 };
 
 const getFlowerTemplate = () => document.getElementById('flowerTemplate').content.cloneNode(true);
+
+function addActionListenerToFlower(flowerHtml) {
+    flowerHtml.querySelector('.add').onclick = function() {
+        this.parentNode.childNodes[5].textContent = parseInt(this.parentNode.childNodes[5].textContent) + 1;
+    };
+    flowerHtml.querySelector('.remove').onclick = function() {
+        this.parentNode.childNodes[5].textContent = parseInt(this.parentNode.childNodes[5].textContent) - 1;
+    };
+}
