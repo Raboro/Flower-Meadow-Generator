@@ -130,6 +130,11 @@ function addActionListenerToFlower(flowerHtml) {
         this.parentNode.childNodes[5].textContent = parseInt(this.parentNode.childNodes[5].textContent) + 1;
     };
     flowerHtml.querySelector('.remove').onclick = function() {
-        this.parentNode.childNodes[5].textContent = parseInt(this.parentNode.childNodes[5].textContent) - 1;
+        const value = this.parentNode.childNodes[5];
+        if (parseInt(value.textContent) > 1) {
+            value.textContent = parseInt(value.textContent) - 1;
+        } else {
+            value.textContent = 0;
+        }
     };
 }
