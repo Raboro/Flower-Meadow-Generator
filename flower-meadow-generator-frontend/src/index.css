@@ -11,7 +11,8 @@
     grid-template-areas:
         'header'
         'add'
-        'overview';
+        'overview'
+        'generate';
 }
 
 .gridItem {
@@ -53,6 +54,10 @@
 
 .gridItem:nth-child(3) {
     grid-area: overview;
+}
+
+.gridItem:nth-child(4) {
+    grid-area: generate;
 }
 
 .gridItem:nth-child(2), .gridItem:nth-child(3) {
@@ -253,6 +258,25 @@ input[type="color"]::-webkit-color-swatch {
 .overviewFlowerFlexbox {
     display: flex;
     flex-flow: wrap;
+}
+
+.generateButton {
+    background-color: rgba(201, 222, 183, 0.19);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    display: block;
+    font-size: 1.3rem;
+    margin: 1.5vh auto;
+    transition-duration: .6s;
+    padding: 6px 20px;
+    border: 3px solid rgba(201, 222, 183, 0.9);
+    border-radius: 10px;
+}
+
+.generateButton:hover {
+    scale: 1.02;
+    transition-duration: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px,
+    rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
 @media only screen and (max-width: 1000px) {
