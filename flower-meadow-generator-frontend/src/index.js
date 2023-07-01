@@ -132,13 +132,13 @@ function addActionListenerToFlower(flowerHtml) {
 }
 
 function addIncreaseCounterActionListener(flowerHtml) {
-    flowerHtml.querySelector('.add').onclick = function () {
+    flowerHtml.querySelector('.add').onclick = function() {
         this.parentNode.childNodes[5].textContent = parseInt(this.parentNode.childNodes[5].textContent) + 1;
     };
 }
 
 function addDecreaseCounterActionListener(flowerHtml) {
-    flowerHtml.querySelector('.remove').onclick = function () {
+    flowerHtml.querySelector('.remove').onclick = function() {
         const value = this.parentNode.childNodes[5];
         if (parseInt(value.textContent) > 1) {
             value.textContent = parseInt(value.textContent) - 1;
@@ -149,16 +149,16 @@ function addDecreaseCounterActionListener(flowerHtml) {
 }
 
 function addDeleteActionsListener(flowerHtml) {
-    flowerHtml.querySelector('.delete').onclick = function () {
+    flowerHtml.querySelector('.delete').onclick = function() {
         const id = getIDOfFlower(this.parentNode.parentNode);
         const overview = this.parentNode.parentNode.parentNode;
         for (const element of overview.childNodes) {
             if (getIDOfFlower(element) === id) {
-                overview.removeChild(element)
+                overview.removeChild(element);
             }
         }
         deleteFlowerByID(id);
-    }
+    };
 }
 
 const getIDOfFlower = (node) => node.childNodes[3].childNodes[3].childNodes[1].textContent;
