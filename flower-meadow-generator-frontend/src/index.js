@@ -119,7 +119,7 @@ const constructProperty = (property) => {
     content.style.fontWeight = 'bold';
     div.appendChild(description);
     div.appendChild(content);
-    div.classList.add('flowerProperty');
+    div.classList.add('flowerProperty', 'defaultBorderBackgroundShadow');
     return div;
 };
 

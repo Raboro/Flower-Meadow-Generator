@@ -1,9 +1,5 @@
 .flower {
     margin: 2vh 1.8vw;
-    border: 3px solid rgba(201, 222, 183, 0.9);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-    border-radius: 15px;
-    transition-duration: .6s;
 }
 
 .flower:hover {
@@ -58,10 +54,7 @@
     max-width: 200px;
     font-size: 11px;
     display: flex;
-    border: 2px solid rgba(201, 222, 183, 0.9);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     border-radius: 8px;
-    transition-duration: .6s;
 }
 
 .flowerProperty:hover {
