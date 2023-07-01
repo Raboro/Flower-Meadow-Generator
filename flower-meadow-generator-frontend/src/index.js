@@ -137,4 +137,26 @@ function addActionListenerToFlower(flowerHtml) {
             value.textContent = 0;
         }
     };
+    flowerHtml.querySelector('.delete').onclick = function () {
+        const id = getIDOfFlower(this.parentNode.parentNode);
+        const overview = this.parentNode.parentNode.parentNode;
+        for (const element of overview.childNodes) {
+            if (getIDOfFlower(element) === id) {
+                overview.removeChild(element)
+            }
+        }
+        deleteFlowerByID(id);
+    }
+}
+
+const getIDOfFlower = (node) => node.childNodes[3].childNodes[3].childNodes[1].textContent;
+
+function deleteFlowerByID(id) {
+    fetch('http://localhost:8081/flower/' + id, {
+        method: 'DELETE',
+        headers: {
+            Accept: 'application/json',
+            'Content-type': 'application/json; charset=UTF-8'
+        }
+    }).catch(error => console.log(error));
 }
