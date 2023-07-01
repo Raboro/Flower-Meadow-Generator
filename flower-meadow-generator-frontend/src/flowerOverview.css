@@ -4,7 +4,7 @@
 
 .flower:hover {
     scale: 1.01;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
     transition-duration: .6s;
 }
 
@@ -13,23 +13,22 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 6px;
+    box-shadow: rgb(0 0 0 / 10%) 0 2px 6px;
     display: inline-block;
-    border: 3px solid rgba(93, 105, 81, 0.41);
+    border: 3px solid rgb(93 105 81 / 41%);
     transition-duration: .6s;
 }
 
 .previewCircleFlower:hover {
     scale: 1.01;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
     transition-duration: .6s;
 }
 
 .flowerPropertiesOverview {
     margin: 3vh;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 1rem;
     max-width: 200px;
 }
@@ -59,7 +58,7 @@
 
 .flowerProperty:hover {
     scale: 1.03;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
     transition-duration: .6s;
 }
 

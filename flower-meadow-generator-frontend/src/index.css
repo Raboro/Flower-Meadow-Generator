@@ -5,10 +5,10 @@
 }
 
 .defaultBorderBackgroundShadow {
-    background-color: rgba(239, 248, 226, 0.65);
-    border: 3px solid rgba(201, 222, 183, 0.9);
+    background-color: rgb(239 248 226 / 65%);
+    border: 3px solid rgb(201 222 183 / 90%);
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
     transition-duration: .6s;
 }
 
@@ -74,8 +74,8 @@
 }
 
 .gridItem:nth-child(2):hover, .gridItem:nth-child(3):hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px,
-    rgba(0, 0, 0, 0.1) 0 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px,
+    rgb(0 0 0 / 10%) 0 4px 12px;
     transition-duration: .6s;
 }
 
@@ -134,27 +134,27 @@
 input {
     border: 0;
     border-bottom: 2px solid black;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(0 0 0 / 0%);
 }
 
 input:focus {
     outline: none;
-    border-color: rgba(177, 213, 147, 0.9);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    border-color: rgb(177 213 147 / 90%);
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
 }
 
 input[type="checkbox"] {
     left: 15px;
     top: -1vh;
     z-index: 0;
-    -webkit-appearance: none;
+    appearance: none;
 }
 
 input[type="checkbox"] + label::after {
     width: 15px;
     height: 15px;
     border-radius: 20px;
-    border: 2px solid rgba(177, 213, 147, 0.9);
+    border: 2px solid rgb(177 213 147 / 90%);
     display: block;
     content: "";
     float: left;
@@ -166,7 +166,7 @@ input[type="checkbox"] + label::after {
 
 input[type="checkbox"]:checked + label::after {
     box-shadow: inset 0 0 0 3px #fff;
-    background-color: rgba(177, 213, 147, 0.9);
+    background-color: rgb(177 213 147 / 90%);
 }
 
 input[type="color"] {
@@ -249,8 +249,8 @@ input[type="color"]::-webkit-color-swatch {
 .addButton:hover {
     transition-duration: .6s;
     scale: 1.005;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px,
-    rgba(0, 0, 0, 0.1) 0 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px,
+    rgb(0 0 0 / 10%) 0 4px 12px;
 }
 
 .overviewFlowerFlexbox {
@@ -268,8 +268,8 @@ input[type="color"]::-webkit-color-swatch {
 .generateButton:hover {
     scale: 1.02;
     transition-duration: 0.5s;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px,
-    rgba(0, 0, 0, 0.1) 0 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px,
+    rgb(0 0 0 / 10%) 0 4px 12px;
 }
 
 @media only screen and (max-width: 1000px) {
