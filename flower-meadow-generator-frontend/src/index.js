@@ -126,10 +126,10 @@ const constructProperty = (property) => {
 const getFlowerTemplate = () => document.getElementById('flowerTemplate').content.cloneNode(true);
 
 function addActionListenerToFlower(flowerHtml) {
-    flowerHtml.querySelector('.add').onclick = function() {
+    flowerHtml.querySelector('.add').onclick = function () {
         this.parentNode.childNodes[5].textContent = parseInt(this.parentNode.childNodes[5].textContent) + 1;
     };
-    flowerHtml.querySelector('.remove').onclick = function() {
+    flowerHtml.querySelector('.remove').onclick = function () {
         const value = this.parentNode.childNodes[5];
         if (parseInt(value.textContent) > 1) {
             value.textContent = parseInt(value.textContent) - 1;
