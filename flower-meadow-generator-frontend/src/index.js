@@ -126,9 +126,18 @@ const constructProperty = (property) => {
 const getFlowerTemplate = () => document.getElementById('flowerTemplate').content.cloneNode(true);
 
 function addActionListenerToFlower(flowerHtml) {
+    addIncreaseCounterActionListener(flowerHtml);
+    addDecreaseCounterActionListener(flowerHtml);
+    addDeleteActionsListener(flowerHtml);
+}
+
+function addIncreaseCounterActionListener(flowerHtml) {
     flowerHtml.querySelector('.add').onclick = function () {
         this.parentNode.childNodes[5].textContent = parseInt(this.parentNode.childNodes[5].textContent) + 1;
     };
+}
+
+function addDecreaseCounterActionListener(flowerHtml) {
     flowerHtml.querySelector('.remove').onclick = function () {
         const value = this.parentNode.childNodes[5];
         if (parseInt(value.textContent) > 1) {
@@ -137,6 +146,9 @@ function addActionListenerToFlower(flowerHtml) {
             value.textContent = 0;
         }
     };
+}
+
+function addDeleteActionsListener(flowerHtml) {
     flowerHtml.querySelector('.delete').onclick = function () {
         const id = getIDOfFlower(this.parentNode.parentNode);
         const overview = this.parentNode.parentNode.parentNode;
