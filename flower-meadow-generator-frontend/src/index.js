@@ -98,6 +98,7 @@ function constructFlower(flower) {
     const flowerHtml = getFlowerTemplate().childNodes.item(1);
     const flowerProperties = flowerHtml.querySelector('.flowerPropertiesOverview');
     addActionListenerToFlower(flowerHtml);
+    addStyling(flower, flowerHtml);
     properties.forEach(property => flowerProperties.appendChild(property));
     return flowerHtml;
 }
@@ -171,4 +172,15 @@ function deleteFlowerByID(id) {
             'Content-type': 'application/json; charset=UTF-8'
         }
     }).catch(error => console.log(error));
+}
+
+function addStyling(flower, flowerHtml) {
+    const flowerStem = flowerHtml.querySelector('.flowerStem');
+    const height = (flower.stemHeight === 10) ? 90 : flower.stemHeight * 10;
+    const width = (flower.stemWidth === 10) ? 90 : flower.stemWidth * 4;
+    flowerStem.style.height = height + '%';
+    flowerStem.style.width = width + '%';
+    flowerStem.style.marginTop = 95 - height + '%';
+    flowerStem.style.marginLeft = 50 - (width / 2) + '%';
+    flowerStem.style.backgroundColor = flower.stemColor;
 }
