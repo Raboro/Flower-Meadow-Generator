@@ -53,6 +53,16 @@ Just run the following command to start the three docker container: One for the 
 $ docker compose up
 ````
 
+Or you can use ``make`` to run / stop or restart the application:
+````bash
+$ make up
+>
+$ make down
+>
+$ make restart
+>
+````
+
 ## Reach the application
 
 After the starting process you can reach the container/services: <br>
