@@ -179,6 +179,11 @@ function addStyling(flower, flowerHtml) {
     const height = (flower.stemHeight === 10) ? 90 : flower.stemHeight * 10;
     const width = (flower.stemWidth === 10) ? 90 : flower.stemWidth * 4;
     addStylingToHtmlElement(flowerStem, width, height, flower.stemColor)
+    const flowerPetal = flowerHtml.querySelector('.flowerPetal');
+    const petalHeight = (flower.petalHeight === 10) ? 90 : flower.petalHeight * 3;
+    const petalWidth = (flower.petalWidth === 10) ? 90 : flower.petalWidth * 8;
+    addStylingToHtmlElement(flowerPetal, petalWidth, petalHeight, flower.petalColor)
+    flowerPetal.style.marginTop = (- height - petalHeight) + '%';
 }
 
 function addStylingToHtmlElement(element, width, height, color) {
