@@ -180,7 +180,7 @@ function addStyling(flower, flowerHtml) {
     const width = (flower.stemWidth === 10) ? 90 : flower.stemWidth * 4;
     flowerStem.style.height = height + '%';
     flowerStem.style.width = width + '%';
-    flowerStem.style.marginTop = 95 - height + '%';
+    flowerStem.style.marginTop = 100 - height + '%';
     flowerStem.style.marginLeft = 50 - (width / 2) + '%';
     flowerStem.style.backgroundColor = flower.stemColor;
 }
