@@ -178,9 +178,13 @@ function addStyling(flower, flowerHtml) {
     const flowerStem = flowerHtml.querySelector('.flowerStem');
     const height = (flower.stemHeight === 10) ? 90 : flower.stemHeight * 10;
     const width = (flower.stemWidth === 10) ? 90 : flower.stemWidth * 4;
-    flowerStem.style.height = height + '%';
-    flowerStem.style.width = width + '%';
-    flowerStem.style.marginTop = 100 - height + '%';
-    flowerStem.style.marginLeft = 50 - (width / 2) + '%';
-    flowerStem.style.backgroundColor = flower.stemColor;
+    addStylingToHtmlElement(flowerStem, width, height, flower.stemColor)
+}
+
+function addStylingToHtmlElement(element, width, height, color) {
+    element.style.height = height + '%';
+    element.style.width = width + '%';
+    element.style.marginTop = 100 - height + '%';
+    element.style.marginLeft = 50 - (width / 2) + '%';
+    element.style.backgroundColor = color;
 }
