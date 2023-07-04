@@ -186,7 +186,7 @@ function addStyling(flower, flowerHtml) {
     addStylingToHtmlElement(flowerPetal, petalWidth, petalHeight, flower.petalColor);
     flowerPetal.style.marginTop = (-height - petalHeight) + '%';
     if (flower.stemThrones) {
-        addThrones(flowerHtml, flower.stemColor)
+        addThrones(flowerHtml, flower.stemColor);
     }
 }
 
@@ -213,6 +213,6 @@ function darkerValue(stringValue) {
 function addThrones(flowerHtml, color) {
     const throneRightUp = flowerHtml.querySelector('.throneRightUp');
     const throneRightDown = flowerHtml.querySelector('.throneRightDown');
-    throneRightUp.style.borderBottom = "0.5vw solid " + createDarkBorder(color);
-    throneRightDown.style.borderLeft = "0.5vw solid " + createDarkBorder(color);
+    throneRightUp.style.borderBottom = '0.5vw solid ' + createDarkBorder(color);
+    throneRightDown.style.borderLeft = '0.5vw solid ' + createDarkBorder(color);
 }
