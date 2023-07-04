@@ -18,14 +18,17 @@ function clearValidation() {
 }
 
 // eslint-disable-next-line no-unused-vars
-function addFlower() {
+async function addFlower() {
     clearValidation();
     const flower = createFlower();
     if (isInvalid(flower)) {
         handleInvalidFlower();
         return;
     }
-    sendValidFlower(flower);
+    await sendValidFlower(flower);
+    if (!shouldLoadFlowers()) {
+        await fetchFlowers();
+    }
 }
 
 function createFlower() {
@@ -57,8 +60,8 @@ function editFlowerStatus(text, color) {
     element.style.color = color;
 }
 
-function sendValidFlower(flower) {
-    fetch('http://localhost:8081/flower', {
+async function sendValidFlower(flower) {
+    await fetch('http://localhost:8081/flower', {
         method: 'POST',
         body: JSON.stringify(flower),
         headers: {
