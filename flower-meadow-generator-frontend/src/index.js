@@ -201,8 +201,8 @@ function addStylingToHtmlElement(element, width, height, color) {
 }
 
 function createDarkBorder(color) {
-    const hex = color.replace("#", "");
-    return "#" + darkerValue(hex.substring(0, 2)) + darkerValue(hex.substring(2, 4)) + darkerValue(hex.substring(4, 6));
+    const hex = color.replace('#', '');
+    return '#' + darkerValue(hex.substring(0, 2)) + darkerValue(hex.substring(2, 4)) + darkerValue(hex.substring(4, 6));
 }
 
 function darkerValue(stringValue) {
