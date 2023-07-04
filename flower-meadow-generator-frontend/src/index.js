@@ -45,7 +45,8 @@ function createFlower() {
 function isInvalid(flower) {
     const isEmpty = flower.name === '' || flower.category === '';
     const isToLow = flower.stemWidth < 1 || flower.stemHeight < 1 || flower.petalWidth < 1 || flower.petalHeight < 1;
-    return isEmpty || isToLow;
+    const isToHigh = (parseInt(flower.stemHeight) + parseInt(flower.petalHeight) / 2) > 11;
+    return isEmpty || isToLow || isToHigh;
 }
 
 const handleInvalidFlower = () => editFlowerStatus('Invalid Flower', 'red');
@@ -176,12 +177,12 @@ function deleteFlowerByID(id) {
 
 function addStyling(flower, flowerHtml) {
     const flowerStem = flowerHtml.querySelector('.flowerStem');
-    const height = (flower.stemHeight === 10) ? 90 : flower.stemHeight * 10;
-    const width = (flower.stemWidth === 10) ? 90 : flower.stemWidth * 4;
+    const height = (flower.stemHeight >= 10) ? 90 : flower.stemHeight * 10;
+    const width = (flower.stemWidth >= 10) ? 36 : flower.stemWidth * 4;
     addStylingToHtmlElement(flowerStem, width, height, flower.stemColor);
     const flowerPetal = flowerHtml.querySelector('.flowerPetal');
-    const petalHeight = (flower.petalHeight === 10) ? 90 : flower.petalHeight * 3;
-    const petalWidth = (flower.petalWidth === 10) ? 90 : flower.petalWidth * 8;
+    const petalHeight = (flower.petalHeight >= 10) ? 27 : flower.petalHeight * 3;
+    const petalWidth = (flower.petalWidth >= 10) ? 50 : flower.petalWidth * 8;
     addStylingToHtmlElement(flowerPetal, petalWidth, petalHeight, flower.petalColor);
     flowerPetal.style.marginTop = (-height - petalHeight) + '%';
 }
