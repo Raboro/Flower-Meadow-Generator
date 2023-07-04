@@ -185,6 +185,9 @@ function addStyling(flower, flowerHtml) {
     const petalWidth = (flower.petalWidth >= 10) ? 50 : flower.petalWidth * 8;
     addStylingToHtmlElement(flowerPetal, petalWidth, petalHeight, flower.petalColor);
     flowerPetal.style.marginTop = (-height - petalHeight) + '%';
+    if (flower.stemThrones) {
+        addThrones(flowerHtml, flower.stemColor)
+    }
 }
 
 function addStylingToHtmlElement(element, width, height, color) {
@@ -205,4 +208,11 @@ function createDarkBorder(color) {
 function darkerValue(stringValue) {
     const value = parseInt(stringValue, 16);
     return Math.max(value - 20, 0).toString(16);
+}
+
+function addThrones(flowerHtml, color) {
+    const throneRightUp = flowerHtml.querySelector('.throneRightUp');
+    const throneRightDown = flowerHtml.querySelector('.throneRightDown');
+    throneRightUp.style.borderBottom = "0.5vw solid " + createDarkBorder(color);
+    throneRightDown.style.borderLeft = "0.5vw solid " + createDarkBorder(color);
 }
