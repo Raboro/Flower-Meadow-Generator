@@ -189,7 +189,19 @@ function addStyling(flower, flowerHtml) {
 function addStylingToHtmlElement(element, width, height, color) {
     element.style.height = height + '%';
     element.style.width = width + '%';
-    element.style.marginTop = 100 - height + '%';
+    element.style.marginTop = 98 - height + '%';
     element.style.marginLeft = 50 - (width / 2) + '%';
     element.style.backgroundColor = color;
+    element.style.border = '2px solid ' + createDarkBorder(color);
+    element.style.borderRadius = '10px';
+}
+
+function createDarkBorder(color) {
+    const hex = color.replace("#", "");
+    return "#" + darkerValue(hex.substring(0, 2)) + darkerValue(hex.substring(2, 4)) + darkerValue(hex.substring(4, 6));
+}
+
+function darkerValue(stringValue) {
+    const value = parseInt(stringValue, 16);
+    return Math.max(value - 20, 0).toString(16);
 }
