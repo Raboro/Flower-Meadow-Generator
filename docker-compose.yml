@@ -17,7 +17,8 @@ services:
     ports:
       - "8081:8080"
     depends_on:
-      - "db"
+      db:
+        condition: service_healthy
     networks:
       my-network:
         aliases:
@@ -33,7 +34,13 @@ services:
       POSTGRES_USER: f-m-generator-user
       POSTGRES_PASSWORD: test1234
     volumes:
-      - ./sql/initDatabase.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./database/data:/var/lib/postgresql/data
+      - ./database/initDatabase.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U f-m-generator-user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       my-network:
         aliases:
