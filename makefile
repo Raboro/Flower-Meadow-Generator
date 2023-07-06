@@ -15,3 +15,9 @@ down:
 restart:
 	docker-compose down
 	docker-compose up --build -d
+
+execDB:
+	docker exec -it flower-meadow-generator-db bash
+
+execBackend:
+	docker exec -it flower-meadow-generator-backend-1 bash
