@@ -41,7 +41,8 @@ function createFlower() {
         stemThrones: document.getElementById('addFlowerStemThrones').checked,
         petalColor: document.getElementById('addFlowerPetalColor').value,
         petalHeight: document.getElementById('addFlowerPetalHeight').value,
-        petalWidth: document.getElementById('addFlowerPetalWidth').value
+        petalWidth: document.getElementById('addFlowerPetalWidth').value,
+        petalThrones: document.getElementById('addFlowerPetalThrones').checked
     };
 }
 
@@ -191,6 +192,9 @@ function addStyling(flower, flowerHtml) {
     if (flower.stemThrones) {
         addThrones(flowerHtml, flower.stemColor);
     }
+    if (flower.petalThrones) {
+        addPetalThrones(flowerHtml, flower.petalColor);
+    }
 }
 
 function addStylingToHtmlElement(element, width, height, color) {
@@ -218,4 +222,9 @@ function addThrones(flowerHtml, color) {
     const throneRightDown = flowerHtml.querySelector('.throneRightDown');
     throneRightUp.style.borderBottom = '0.5vw solid ' + createDarkBorder(color);
     throneRightDown.style.borderLeft = '0.5vw solid ' + createDarkBorder(color);
+}
+
+function addPetalThrones(flowerHtml, color) {
+    const throneTopLeft = flowerHtml.querySelector('.throneTop');
+    throneTopLeft.style.borderBottom = '0.5vw solid ' + createDarkBorder(color);
 }

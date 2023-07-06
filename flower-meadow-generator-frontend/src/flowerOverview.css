@@ -139,3 +139,10 @@
     border-left: 0.5vw solid transparent;
     border-bottom: 0.5vw solid transparent;
 }
+
+.throneTop {
+    margin-top: -20%;
+    margin-left: 10%;
+    border-left: 0.5vw solid transparent;
+    border-bottom: 0.5vw solid transparent;
+}
