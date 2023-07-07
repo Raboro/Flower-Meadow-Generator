@@ -91,11 +91,23 @@ async function fetchFlowers() {
 }
 
 function loadFlowers(flowers) {
+    addSearchAction();
     const flowerFlexbox = document.getElementById('overviewFlowerFlexbox');
     while (flowerFlexbox.firstChild) {
         flowerFlexbox.removeChild(flowerFlexbox.lastChild);
     }
     flowers.forEach(f => flowerFlexbox.appendChild(constructFlower(f)));
+}
+
+function addSearchAction() {
+    document.getElementById('searchFlower').addEventListener('input', function(event) {
+        const search = event.target.value;
+        const flowers = document.getElementsByClassName('flower');
+        for (const flower of flowers) {
+            const name = flower.childNodes[3].childNodes[4].textContent.split('-')[1];
+            flower.style.display = name.startsWith(search) ? 'block' : 'none';
+        }
+    });
 }
 
 function constructFlower(flower) {
