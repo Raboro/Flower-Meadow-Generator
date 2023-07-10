@@ -11,6 +11,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 /**
@@ -64,14 +65,16 @@ public class FlowerBusinessLogic {
     }
 
     public List<FlowerDTO> getFlowersSortedByName() {
+        return sortBy(flowers -> flowers.sort(Comparator.comparing(f -> f.getName().toLowerCase(Locale.ENGLISH))));
+    }
+
+    private List<FlowerDTO> sortBy(Consumer<List<FlowerDTO>> sorter) {
         List<FlowerDTO> flowers = getAll();
-        flowers.sort(Comparator.comparing(f -> f.getName().toLowerCase(Locale.ENGLISH)));
+        sorter.accept(flowers);
         return flowers;
     }
 
     public List<FlowerDTO> getFlowersSortedByCategory() {
-        List<FlowerDTO> flowers = getAll();
-        flowers.sort(Comparator.comparing(f -> f.getCategory().toLowerCase(Locale.ENGLISH)));
-        return flowers;
+        return sortBy(flowers -> flowers.sort(Comparator.comparing(f -> f.getCategory().toLowerCase(Locale.ENGLISH))));
     }
 }
