@@ -9,6 +9,9 @@ up-no-detach:
 up-no-build:
 	docker-compose up
 
+up-no-build-detach:
+	docker-compose up -d
+
 down:
 	docker-compose down
 
