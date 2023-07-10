@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @author Raboro
@@ -23,7 +24,7 @@ public class FlowerBusinessLogic {
     public List<FlowerDTO> getAll() {
         return repository.findAll().stream()
                 .map(mapper::toDTO)
-                .toList();
+                .collect(Collectors.toList());
     }
 
     public FlowerDTO addFlower(FlowerDTO flowerDTO) {
