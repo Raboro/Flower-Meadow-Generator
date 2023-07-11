@@ -40,11 +40,22 @@ enum FlowerSorting {
             return flowers -> flowers.sort(Comparator.comparingInt(FlowerDTO::getPetalWidth));
         }
     },
-
     PETALHEIGHT {
         @Override
         Consumer<List<FlowerDTO>> sort() {
             return flowers -> flowers.sort(Comparator.comparingInt(FlowerDTO::getPetalHeight));
+        }
+    },
+    STEMTHRONES {
+        @Override
+        Consumer<List<FlowerDTO>> sort() {
+            return flowerDTOS -> flowerDTOS.sort((o1, o2) -> Boolean.compare(o1.isStemThrones(), o2.isStemThrones()));
+        }
+    },
+    PETALTHRONES {
+        @Override
+        Consumer<List<FlowerDTO>> sort() {
+            return flowerDTOS -> flowerDTOS.sort((o1, o2) -> Boolean.compare(o1.isPetalThrones(), o2.isPetalThrones()));
         }
     };
 
