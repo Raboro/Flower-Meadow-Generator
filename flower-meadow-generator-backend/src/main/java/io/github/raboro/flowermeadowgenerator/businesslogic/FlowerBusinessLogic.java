@@ -23,7 +23,7 @@ public class FlowerBusinessLogic {
     private final FlowerMapper mapper = new FlowerMapper();
 
     public List<FlowerDTO> getAll() {
-        return repository.findAll().stream()
+        return repository.findAll().parallelStream()
                 .map(mapper::toDTO)
                 .collect(Collectors.toList());
     }
@@ -57,7 +57,7 @@ public class FlowerBusinessLogic {
     }
 
     public List<FlowerDTO> getFlowersByCategory(String category) {
-        return repository.findAllByCategory(category).stream()
+        return repository.findAllByCategory(category).parallelStream()
                 .map(mapper::toDTO)
                 .toList();
     }
