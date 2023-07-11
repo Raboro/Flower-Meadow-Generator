@@ -21,6 +21,31 @@ enum FlowerSorting {
         Consumer<List<FlowerDTO>> sort() {
             return flowers -> flowers.sort(Comparator.comparing(f -> toLowerCase(f.getCategory())));
         }
+    },
+    STEMWIDTH {
+        @Override
+        Consumer<List<FlowerDTO>> sort() {
+            return flowers -> flowers.sort(Comparator.comparingInt(FlowerDTO::getStemWidth));
+        }
+    },
+    STEMHEIGHT {
+        @Override
+        Consumer<List<FlowerDTO>> sort() {
+            return flowers -> flowers.sort(Comparator.comparingInt(FlowerDTO::getStemHeight));
+        }
+    },
+    PETALWIDTH {
+        @Override
+        Consumer<List<FlowerDTO>> sort() {
+            return flowers -> flowers.sort(Comparator.comparingInt(FlowerDTO::getPetalWidth));
+        }
+    },
+
+    PETALHEIGHT {
+        @Override
+        Consumer<List<FlowerDTO>> sort() {
+            return flowers -> flowers.sort(Comparator.comparingInt(FlowerDTO::getPetalHeight));
+        }
     };
 
     abstract Consumer<List<FlowerDTO>> sort();
