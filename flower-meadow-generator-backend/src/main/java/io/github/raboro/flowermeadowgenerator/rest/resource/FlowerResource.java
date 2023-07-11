@@ -71,4 +71,12 @@ public class FlowerResource {
     public List<FlowerDTO> getSortedFlowers(@PathParam("sorting") String sorting) {
         return logic.sortFlowers(sorting);
     }
+
+    @GET
+    @Path("/sort/{sorting}/{reverse}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<FlowerDTO> getSortedFlowersReversed(@PathParam("sorting") String sorting,
+                                                    @PathParam("reverse") boolean reverse) {
+        return logic.sortFlowersReverse(sorting, reverse);
+    }
 }

@@ -7,6 +7,7 @@ import io.github.raboro.flowermeadowgenerator.rest.mapper.FlowerMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -70,6 +71,14 @@ public class FlowerBusinessLogic {
     private List<FlowerDTO> sortBy(Consumer<List<FlowerDTO>> sorter) {
         List<FlowerDTO> flowers = getAll();
         sorter.accept(flowers);
+        return flowers;
+    }
+
+    public List<FlowerDTO> sortFlowersReverse(String name, boolean reverse) {
+        List<FlowerDTO> flowers = sortFlowers(name);
+        if (reverse) {
+            Collections.reverse(flowers);
+        }
         return flowers;
     }
 }
