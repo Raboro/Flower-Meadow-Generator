@@ -66,16 +66,9 @@ public class FlowerResource {
     }
 
     @GET
-    @Path("/sort/name")
+    @Path("/sort/{sorting}")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<FlowerDTO> getFlowersSortedByName() {
-        return logic.getFlowersSortedByName();
-    }
-
-    @GET
-    @Path("/sort/category")
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<FlowerDTO> getFlowersSortedByCategory() {
-        return logic.getFlowersSortedByCategory();
+    public List<FlowerDTO> getSortedFlowers(@PathParam("sorting") String sorting) {
+        return logic.sortFlowers(sorting);
     }
 }

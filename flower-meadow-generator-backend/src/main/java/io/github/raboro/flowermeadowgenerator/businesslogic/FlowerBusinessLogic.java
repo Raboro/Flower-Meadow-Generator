@@ -7,9 +7,7 @@ import io.github.raboro.flowermeadowgenerator.rest.mapper.FlowerMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
@@ -64,17 +62,14 @@ public class FlowerBusinessLogic {
                 .toList();
     }
 
-    public List<FlowerDTO> getFlowersSortedByName() {
-        return sortBy(flowers -> flowers.sort(Comparator.comparing(f -> f.getName().toLowerCase(Locale.ENGLISH))));
+    public List<FlowerDTO> sortFlowers(String name) {
+        final Optional<FlowerSorting> sorting = FlowerSorting.getSorting(name);
+        return sorting.isPresent() ? sortBy(sorting.get().sort()) : getAll();
     }
 
     private List<FlowerDTO> sortBy(Consumer<List<FlowerDTO>> sorter) {
         List<FlowerDTO> flowers = getAll();
         sorter.accept(flowers);
         return flowers;
-    }
-
-    public List<FlowerDTO> getFlowersSortedByCategory() {
-        return sortBy(flowers -> flowers.sort(Comparator.comparing(f -> f.getCategory().toLowerCase(Locale.ENGLISH))));
     }
 }
