@@ -103,6 +103,7 @@ function loadFlowers(flowers) {
     flowers.forEach(f => flowerFlexbox.appendChild(constructFlower(f)));
 }
 
+// eslint-disable-next-line no-unused-vars
 async function fetchSortedFlowers() {
     await flowersGETAndLoading('http://localhost:8081/flower/sort/' + fetchSorting())
 }
