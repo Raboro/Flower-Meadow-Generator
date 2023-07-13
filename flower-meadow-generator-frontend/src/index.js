@@ -105,14 +105,14 @@ function loadFlowers(flowers) {
 
 // eslint-disable-next-line no-unused-vars
 async function fetchSortedFlowers() {
-    await flowersGETAndLoading('http://localhost:8081/flower/sort/' + fetchSorting())
+    await flowersGETAndLoading('http://localhost:8081/flower/sort/' + fetchSorting());
 }
 
 function fetchSorting() {
     const options = document.getElementById('searchFlower').parentNode.childNodes[5].childNodes[1].childNodes;
-    for (let sort of options) {
-        if (sort.selected && sort.textContent !== "Sort by") {
-            return sort.textContent.replace(" ", "");
+    for (const sort of options) {
+        if (sort.selected && sort.textContent !== 'Sort by') {
+            return sort.textContent.replace(' ', '');
         }
     }
 }
