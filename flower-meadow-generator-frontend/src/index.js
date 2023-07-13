@@ -84,7 +84,11 @@ async function toggleOverviewFlower() {
 const shouldLoadFlowers = () => !document.getElementById('overviewFlowerContainer').className.endsWith('show');
 
 async function fetchFlowers() {
-    await fetch('http://localhost:8081/flower')
+    await flowersGETAndLoading('http://localhost:8081/flower');
+}
+
+async function flowersGETAndLoading(URL) {
+    await fetch(URL)
         .then(result => result.json())
         .then(flowers => loadFlowers(flowers))
         .catch(error => console.error(error));
@@ -100,11 +104,7 @@ function loadFlowers(flowers) {
 }
 
 async function fetchSortedFlowers() {
-    const URL = 'http://localhost:8081/flower/sort/' + fetchSorting();
-    await fetch(URL)
-        .then(result => result.json())
-        .then(flowers => loadFlowers(flowers))
-        .catch(error => console.error(error));
+    await flowersGETAndLoading('http://localhost:8081/flower/sort/' + fetchSorting())
 }
 
 function fetchSorting() {
