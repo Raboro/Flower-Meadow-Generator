@@ -276,6 +276,10 @@ input[type="color"]::-webkit-color-swatch {
     rgb(0 0 0 / 10%) 0 4px 12px;
 }
 
+#sorting {
+    margin-left: 1vw;
+}
+
 @media only screen and (max-width: 1000px) {
     .addFlexbox > h4 {
         margin-right: 8%;

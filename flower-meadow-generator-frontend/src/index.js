@@ -105,11 +105,13 @@ function loadFlowers(flowers) {
 
 // eslint-disable-next-line no-unused-vars
 async function fetchSortedFlowers() {
-    await flowersGETAndLoading('http://localhost:8081/flower/sort/' + fetchSorting());
+    const reverse = document.getElementById('reverseSorting').checked;
+    const URL = 'http://localhost:8081/flower/sort/' + fetchSorting() + (reverse ? '/true' : '');
+    await flowersGETAndLoading(URL);
 }
 
 function fetchSorting() {
-    const options = document.getElementById('searchFlower').parentNode.childNodes[5].childNodes[1].childNodes;
+    const options = document.getElementById('searchFlower').parentNode.childNodes[5].childNodes[5].childNodes;
     for (const sort of options) {
         if (sort.selected && sort.textContent !== 'Sort by') {
             return sort.textContent.replace(' ', '');
