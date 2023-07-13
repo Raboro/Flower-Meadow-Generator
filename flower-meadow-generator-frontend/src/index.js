@@ -99,6 +99,23 @@ function loadFlowers(flowers) {
     flowers.forEach(f => flowerFlexbox.appendChild(constructFlower(f)));
 }
 
+async function fetchSortedFlowers() {
+    const URL = 'http://localhost:8081/flower/sort/' + fetchSorting();
+    await fetch(URL)
+        .then(result => result.json())
+        .then(flowers => loadFlowers(flowers))
+        .catch(error => console.error(error));
+}
+
+function fetchSorting() {
+    const options = document.getElementById('searchFlower').parentNode.childNodes[5].childNodes[1].childNodes;
+    for (let sort of options) {
+        if (sort.selected && sort.textContent !== "Sort by") {
+            return sort.textContent.replace(" ", "");
+        }
+    }
+}
+
 function addSearchAction() {
     document.getElementById('searchFlower').addEventListener('input', function(event) {
         const search = event.target.value;
