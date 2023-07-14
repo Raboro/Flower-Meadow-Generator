@@ -107,6 +107,7 @@ function loadFlowers(flowers) {
 async function fetchSortedFlowers() {
     const reverse = document.getElementById('reverseSorting').checked;
     const URL = 'http://localhost:8081/flower/sort/' + fetchSorting() + (reverse ? '/true' : '');
+    document.getElementById('searchFlower').value = '';
     await flowersGETAndLoading(URL);
 }
 
