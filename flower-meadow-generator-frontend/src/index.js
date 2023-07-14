@@ -260,3 +260,39 @@ function addPetalThrones(flowerHtml, color) {
     const throneTopLeft = flowerHtml.querySelector('.throneTop');
     throneTopLeft.style.borderBottom = '0.5vw solid ' + createDarkBorder(color);
 }
+
+function generateFlowerMeadow() {
+    const flowers = document.getElementsByClassName('flower');
+    const flowerMeadow = document.getElementsByClassName('flowerMeadow')[0];
+    for (let flower of flowers) {
+        addFlowerToMeadow(flower.cloneNode(true), flowerMeadow);
+    }
+    shuffleChildren(flowerMeadow);
+}
+
+function addFlowerToMeadow(flower, flowerMeadow) {
+    let flowerCounter = flower.childNodes[5].childNodes[5].textContent;
+    const flowerUI = flower.childNodes[1];
+    overrideStyle(flowerUI);
+    appendToMeadow(flowerCounter, flowerMeadow, flowerUI);
+}
+
+function overrideStyle(flowerUI) {
+    flowerUI.style.border = "none";
+    flowerUI.style.boxShadow = "none";
+    flowerUI.style.margin = "-0.5vw";
+    flowerUI.style.marginLeft = "-3vw";
+}
+
+function appendToMeadow(flowerCounter, flowerMeadow, flowerUI) {
+    while (flowerCounter > 0) {
+        flowerMeadow.appendChild(flowerUI.cloneNode(true))
+        flowerCounter--;
+    }
+}
+
+function shuffleChildren(flowerMeadow) {
+    for (let i = flowerMeadow.children.length; i >= 0; i--) {
+        flowerMeadow.appendChild(flowerMeadow.children[Math.random() * i | 0]);
+    }
+}
