@@ -262,6 +262,7 @@ function addPetalThrones(flowerHtml, color) {
     throneTopLeft.style.borderBottom = '0.5vw solid ' + createDarkBorder(color);
 }
 
+// eslint-disable-next-line no-unused-vars
 function generateFlowerMeadow() {
     const flowers = document.getElementsByClassName('flower');
     const flowerMeadow = document.getElementsByClassName('flowerMeadow')[0];
