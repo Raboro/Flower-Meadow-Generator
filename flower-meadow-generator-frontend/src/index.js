@@ -160,6 +160,10 @@ const constructProperty = (property) => {
     const content = document.createElement('p');
     content.textContent = property[1];
     content.style.fontWeight = 'bold';
+    if (property[0].endsWith("Color")) {
+        content.style.backgroundColor = property[1];
+        content.style.borderRadius = "3px";
+    }
     div.appendChild(description);
     div.appendChild(content);
     div.classList.add('flowerProperty', 'defaultBorderBackgroundShadow');
