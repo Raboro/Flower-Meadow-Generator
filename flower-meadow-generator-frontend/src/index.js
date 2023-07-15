@@ -97,10 +97,14 @@ async function flowersGETAndLoading(URL) {
 function loadFlowers(flowers) {
     addSearchAction();
     const flowerFlexbox = document.getElementById('overviewFlowerFlexbox');
-    while (flowerFlexbox.firstChild) {
-        flowerFlexbox.removeChild(flowerFlexbox.lastChild);
-    }
+    removeAllChildren(flowerFlexbox);
     flowers.forEach(f => flowerFlexbox.appendChild(constructFlower(f)));
+}
+
+function removeAllChildren(element) {
+    while (element.firstChild) {
+        element.removeChild(element.lastChild);
+    }
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -266,6 +270,7 @@ function addPetalThrones(flowerHtml, color) {
 function generateFlowerMeadow() {
     const flowers = document.getElementsByClassName('flower');
     const flowerMeadow = document.getElementsByClassName('flowerMeadow')[0];
+    removeAllChildren(flowerMeadow);
     for (const flower of flowers) {
         addFlowerToMeadow(flower.cloneNode(true), flowerMeadow);
     }
