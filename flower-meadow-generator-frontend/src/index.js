@@ -176,6 +176,7 @@ function addActionListenerToFlower(flowerHtml) {
     addIncreaseCounterActionListener(flowerHtml);
     addDecreaseCounterActionListener(flowerHtml);
     addDeleteActionsListener(flowerHtml);
+    addEditActionsListener(flowerHtml);
 }
 
 function addIncreaseCounterActionListener(flowerHtml) {
@@ -205,6 +206,23 @@ function addDeleteActionsListener(flowerHtml) {
             }
         }
         deleteFlowerByID(id);
+    };
+}
+
+function addEditActionsListener(flowerHtml) {
+    flowerHtml.querySelector('.edit').onclick = function() {
+        const editHTML = document.getElementsByClassName('gridItem')[1].cloneNode(true);
+        editHTML.style.position= "fixed";
+        editHTML.style.top = "50%";
+        editHTML.style.left = "50%";
+        editHTML.style.transform = "translate(-50%, -50%)";
+        editHTML.childNodes[3].classList.add("show");
+        editHTML.style.backgroundColor = "rgb(239 248 226 / 100%)";
+        editHTML.childNodes[3].childNodes[21].childNodes[1].childNodes[1].innerHTML = "<b>Edit<b>";
+        const cancelButton = editHTML.childNodes[3].childNodes[21].childNodes[1].childNodes[1].cloneNode(true);
+        cancelButton.innerHTML = "<b>Cancel<b>";
+        editHTML.childNodes[3].childNodes[21].childNodes[1].appendChild(cancelButton);
+        this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(editHTML);
     };
 }
 
