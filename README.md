@@ -53,7 +53,7 @@ https://github.com/Raboro/Flower-Meadow-Generator/assets/88288557/a997f6d2-b01f-
 ---
 ## Run the application
 
-Just run the following command to start the three docker container: One for the Java Spring Boot backend one for the frontend and one for the Postgresql database:
+Just run the following command to start the three docker container: One for the Java Spring Boot backend one for the HTML, CSS, JS frontend and one for the PostgreSQL database:
 ````bash
 $ docker compose up
 ````
