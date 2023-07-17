@@ -186,7 +186,7 @@ function addIncreaseCounterActionListener(flowerHtml) {
 
 function addDecreaseCounterActionListener(flowerHtml) {
     flowerHtml.querySelector('.remove').onclick = function() {
-        console.log(this.parentNode.childNodes)
+        console.log(this.parentNode.childNodes);
         const value = this.parentNode.childNodes[3];
         if (parseInt(value.textContent) > 1) {
             value.textContent = parseInt(value.textContent) - 1;
