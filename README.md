@@ -46,6 +46,11 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=raboro_Flower-Meadow-Generator_Frontend&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=raboro_Flower-Meadow-Generator_Frontend)
 
 ---
+## Demo
+
+https://github.com/Raboro/Flower-Meadow-Generator/assets/88288557/a997f6d2-b01f-4dc7-a218-3ac55df4f4e4
+
+---
 ## Run the application
 
 Just run the following command to start the three docker container: One for the Java Spring Boot backend one for the frontend and one for the Postgresql database:
