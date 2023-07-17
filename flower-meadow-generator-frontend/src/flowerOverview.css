@@ -99,7 +99,7 @@
 .add {
     float: left;
     padding: 3px;
-    margin-right: 25%;
+    margin-right: 28%;
 }
 
 .remove {
@@ -108,17 +108,12 @@
     background: none;
 }
 
-.edit {
-    float: right;
-    padding: 3px;
-    margin-left: 25%;
-}
-
 .delete {
     float: right;
     padding: 0;
     background: none;
     margin-right: 3%;
+    margin-left: 35%
 }
 
 .throne {

@@ -176,18 +176,18 @@ function addActionListenerToFlower(flowerHtml) {
     addIncreaseCounterActionListener(flowerHtml);
     addDecreaseCounterActionListener(flowerHtml);
     addDeleteActionsListener(flowerHtml);
-    addEditActionsListener(flowerHtml);
 }
 
 function addIncreaseCounterActionListener(flowerHtml) {
     flowerHtml.querySelector('.add').onclick = function() {
-        this.parentNode.childNodes[5].textContent = parseInt(this.parentNode.childNodes[5].textContent) + 1;
+        this.parentNode.childNodes[3].textContent = parseInt(this.parentNode.childNodes[3].textContent) + 1;
     };
 }
 
 function addDecreaseCounterActionListener(flowerHtml) {
     flowerHtml.querySelector('.remove').onclick = function() {
-        const value = this.parentNode.childNodes[5];
+        console.log(this.parentNode.childNodes)
+        const value = this.parentNode.childNodes[3];
         if (parseInt(value.textContent) > 1) {
             value.textContent = parseInt(value.textContent) - 1;
         } else {
@@ -206,25 +206,6 @@ function addDeleteActionsListener(flowerHtml) {
             }
         }
         deleteFlowerByID(id);
-    };
-}
-
-function addEditActionsListener(flowerHtml) {
-    flowerHtml.querySelector('.edit').onclick = function() {
-        const editHTML = document.getElementsByClassName('gridItem')[1].cloneNode(true);
-        editHTML.style.position = 'fixed';
-        editHTML.style.top = '50%';
-        editHTML.style.left = '50%';
-        editHTML.style.transform = 'translate(-50%, -50%)';
-        editHTML.childNodes[3].classList.add('show');
-        editHTML.style.backgroundColor = 'rgb(239 248 226 / 100%)';
-        editHTML.childNodes[3].childNodes[21].childNodes[1].childNodes[1].innerHTML = '<b>Edit<b>';
-        const cancelButton = editHTML.childNodes[3].childNodes[21].childNodes[1].childNodes[1].cloneNode(true);
-        cancelButton.innerHTML = '<b>Cancel<b>';
-        editHTML.childNodes[3].childNodes[21].childNodes[1].appendChild(cancelButton);
-        editHTML.childNodes[1].removeChild(editHTML.childNodes[1].childNodes[5]);
-        editHTML.childNodes[1].childNodes[1].innerText = "Edit Flower";
-        this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(editHTML);
     };
 }
 
@@ -302,7 +283,7 @@ function generateFlowerMeadow() {
 }
 
 function addFlowerToMeadow(flower, flowerMeadow) {
-    const flowerCounter = flower.childNodes[5].childNodes[5].textContent;
+    const flowerCounter = flower.childNodes[5].childNodes[3].textContent;
     const flowerUI = flower.childNodes[1];
     overrideStyle(flowerUI);
     appendToMeadow(flowerCounter, flowerMeadow, flowerUI);
