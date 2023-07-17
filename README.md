@@ -81,3 +81,25 @@ Make calls to the **backend** flower endpoint (uses port ``8081``):
 ````
 http://localhost:8081/flower
 ````
+
+---
+
+## Features
+- generate flowers
+- flower value validation
+- flower overview with flower design
+- remove flowers
+- search for name
+- sort for:
+  - name
+  - category
+  - stem width
+  - stem height
+  - petal width
+  - petal height
+  - stem thrones
+  - petal thrones
+  - stem color
+  - petal color
+- generate random meadow with flowers
+- select how often a flower should be generated  
