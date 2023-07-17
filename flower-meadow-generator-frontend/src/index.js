@@ -222,6 +222,8 @@ function addEditActionsListener(flowerHtml) {
         const cancelButton = editHTML.childNodes[3].childNodes[21].childNodes[1].childNodes[1].cloneNode(true);
         cancelButton.innerHTML = '<b>Cancel<b>';
         editHTML.childNodes[3].childNodes[21].childNodes[1].appendChild(cancelButton);
+        editHTML.childNodes[1].removeChild(editHTML.childNodes[1].childNodes[5]);
+        editHTML.childNodes[1].childNodes[1].innerText = "Edit Flower";
         this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(editHTML);
     };
 }
