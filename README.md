@@ -68,6 +68,8 @@ $ make restart
 >
 ````
 
+Read more about all `make` commands [here](https://github.com/Raboro/Flower-Meadow-Generator/blob/main/documentation/makefile.md).
+
 ## Reach the application
 
 After the starting process you can reach the container/services: <br>
@@ -82,9 +84,14 @@ Make calls to the **backend** flower endpoint (uses port ``8081``):
 http://localhost:8081/flower
 ````
 
+Read more about all `endpoints` [here](https://github.com/Raboro/Flower-Meadow-Generator/blob/main/documentation/endpoints.md).
+
 ---
 
 ## Features
+
+See a few of them in a [demo](https://github.com/Raboro/Flower-Meadow-Generator/blob/main/documentation/features.md).
+
 - generate flowers
 - flower value validation
 - flower overview with flower design
