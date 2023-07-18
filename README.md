@@ -102,4 +102,5 @@ http://localhost:8081/flower
   - stem color
   - petal color
 - generate random meadow with flowers
-- select how often a flower should be generated  
+- select how often a flower should be generated
+- automaticlly sync database data with `database/data` folder to regain even after restart or stop
